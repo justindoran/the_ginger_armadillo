@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.0.1'
 gem 'faker', '~> 1.4.3'
 gem 'jbuilder', '~> 2.1.3'
 gem 'jquery-rails', '~> 3.1.1'
+gem 'pg', '~> 0.17.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sprockets', '~> 2.11.0'
 gem 'turbolinks', '~> 2.3.0'
@@ -14,7 +15,6 @@ gem 'uglifier', '~> 2.5.3'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.2'
-  gem 'sqlite3', '~> 1.3.9'
 end
 
 group :test do
@@ -29,6 +29,5 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
