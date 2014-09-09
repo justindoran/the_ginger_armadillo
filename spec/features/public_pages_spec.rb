@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+#TODO: Implement some shared_examples_for
 describe "Public pages" do
 
   subject { page }

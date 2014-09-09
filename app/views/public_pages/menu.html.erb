@@ -1,7 +1,7 @@
 <% provide(:title, 'Menu') %>
-<div id="content">
+<div id="content" class="menu">
   <h1>"Fall Savory"</h1>
-  <h2>Menu for September, 2014</h2>
+  <p style="text-align: center;">Menu for September, 2014</p>
   <hr />
 	<div class="menuRibbons">Entrées</div>
     <h2>lamb sliders</h2>
@@ -16,18 +16,18 @@
     <p>tender smoked & spicy braised pork ribs, deboned and stuffed into house
     made kolache grinder rolls served with goat cheese pepper crème, juicy
     tomato, and Granny Ila's pickles & jalapeños . . . . . 7.5</p>
-    <h2>crispy harvest cakes<img src="/images/vegetarian.png" /></h2>
+    <h2>crispy harvest cakes<%= image_tag('vegetarian.png', alt: 'a vegetarian dish.') %></h2>
     <p>grated zucchini & beet cakes fried to order with sautéed sweet potato
     greens & spicy smoked tomato salsa . . . . . 7.5</p>
 
   <div class="menuRibbons">Sides</div>
-    <h2>fall faux-tato salad<img src="/images/vegetarian.png" /></h2>
+    <h2>fall faux-tato salad<%= image_tag('vegetarian.png', alt: 'a vegetarian dish.') %></h2>
     <p>heirloom, butternut, & acorn squash cooked, chilled, and tossed in
     chipotle aioli with celery & onions . . . . . 2.5</p>
-    <h2>cucumber mint slaw<img src="/images/vegetarian.png" />+</h2>
+    <h2>cucumber mint slaw<%= image_tag('vegetarian.png', alt: 'a vegetarian dish.') %>+</h2>
     <p>julienned cucumber & fresh mint coulis with pickled peppers & onions . .
     .  2.5</p>
-    <h2>double butter beans<img src="/images/vegetarian.png" /></h2>
+    <h2>double butter beans<%= image_tag('vegetarian.png', alt: 'a vegetarian dish.') %></h2>
     <p>herb roasted garbanzo beans & butterbeans basted with red peppers & basil
     brown butter. . . . . 2.5</p>
 
@@ -47,7 +47,7 @@
     <p>smoked shredded pork in an orange Sambal glaze with shredded potatoes,
     caramelized onions and peppers, one (local & free range) fried egg, and a
     buttermilk biscuit . . . . . 7.5</p>
-  <h2>Maggie's French Toast <img src="images/vegetarian.png" /></h2>
+  <h2>Maggie's French Toast <%= image_tag('vegetarian.png', alt: 'a vegetarian dish.') %></h2>
     <p>two thick slices of battered & fried homemade bread with Texas grapefruit
     and strawberry syrup<br /> . . . . . 6.5</p>
   <div class="menuRibbons">À la carte brunch items</div>

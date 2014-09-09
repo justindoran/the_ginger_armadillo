@@ -1,3 +1,362 @@
 // Place all the styles related to the PublicPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Sanchez);
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+a{
+	text-decoration: none;color: #c61d23;transition:all .5s ease-in-out;
+}
+a:hover{
+	cursor: pointer;
+	color:black;
+}
+body {
+	line-height: 4;
+	font-family: Montserrat, sans-serif;
+	background-image: image-url('bg-table.png');
+	background-repeat: repeat;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Meyer Reset CSS */
+
+#wrapper{
+	width:100%;
+	min-width: 1020px;
+}
+
+hr{
+	height:30px;
+	background-image: image-url('hr.png');
+	background-position:center;
+	background-repeat: no-repeat;
+	width:100%;
+	border:0px;
+	padding: 0 0 40px 0;
+}
+
+.hr2{
+	height:20px;
+	background-image: image-url('hrw.png');
+	background-position:center;
+	background-repeat: no-repeat;
+	width:100%;
+	border:0px;
+}
+
+h1{
+	font-family: Montserrat, sans-serif;
+	font-weight:bold;
+	color: #c61d23;
+	text-shadow: 1px 1px 0px white; /* Chrome, Firefox 3.5+, IE 10+, Opera 9+, Safari 1+ */
+	text-transform: uppercase;
+	font-size: 2.8em;
+	line-height: 2em;
+}
+
+h2{
+	font-size:1.8em;
+	line-height: 1em;
+}
+
+p{
+	font-weight:lighter;
+	line-height: 1.8em;
+	font-size: .95em;
+	padding: 10px 60px 0px 60px;
+}
+
+#headerbar{
+	background-color: #c61d23;
+	width:100%;
+	height: 106px;
+	border-bottom:3px solid yellow;
+	position: relative;
+}
+
+#logo a{
+	width:340px;
+	height:250px;
+	display:block;
+	margin:0 auto;
+	background-image: image-url('logo.png');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	position:relative;
+	z-index:5;
+	transition: all 0.4s ease-in-out;
+}
+
+#logo a:hover{
+	background-image: image-url('logohover.png');
+}
+
+#nav{
+	background-color:rgba(255, 255, 255, .45);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	height:40px;
+	width:100%;
+	position:relative;
+	z-index:1;
+	margin-top:13px;
+	font-size: .9em;
+}
+
+#navholder{
+	width:1020px;
+	margin:0 auto;
+	display:block;
+}
+
+#nav ul li{
+	display:inline-block;
+	vertical-align:top;
+}
+
+#nav ul li a{
+	padding: 11px 20px;
+	vertical-align:top;
+	line-height: 40px;
+	text-decoration:none;
+	color:white;
+	text-shadow: 1px 1px 1px black; /* Chrome, Firefox 3.5+, IE 10+, Opera 9+, Safari 1+ */
+	transition: all 0.4s ease-in-out;
+}
+
+#nav ul li a:hover{
+	background-color:rgba(255, 255, 255, .45);
+	color:#c61d23;
+	text-shadow: 1px 1px 0px white; /* Chrome, Firefox 3.5+, IE 10+, Opera 9+, Safari 1+ */
+}
+
+#nav .left{
+	width: 400px;
+	height: 40px;
+	display:inline-block;
+}
+
+#nav .right{
+	margin-left: 255px;
+	height: 40px;
+	display:inline-block;
+}
+
+
+#nav2{
+	height:40px;
+	width:732px;
+	display:block;
+	z-index:1;
+	margin: 0 auto;
+	font-size: .9em;
+	font-weight: 400;
+}
+
+#nav2 ul{
+	height:40px;
+}
+
+#nav2 ul li{
+	display:inline-block;
+	vertical-align:top;
+}
+
+#nav2 ul li a{
+	padding: 11px 20px;
+	vertical-align:top;
+	line-height: 40px;
+	text-decoration:none;
+	color:white;
+	text-shadow: 1px 1px 1px black; /* Chrome, Firefox 3.5+, IE 10+, Opera 9+, Safari 1+ */
+	transition: all 0.4s ease-in-out;
+}
+
+#nav2 ul li a:hover{
+	color:#e38e91;
+	text-shadow: 1px 1px 0px transparent; /* Chrome, Firefox 3.5+, IE 10+, Opera 9+, Safari 1+ */
+}
+
+#content{
+	width:860px;
+	margin:0 auto;
+	padding:65px;
+	border-top-right-radius:50px;
+	border-top-left-radius:50px;
+	margin-top: -300px;
+	text-align:center;
+	position: relative;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow:  0px 0px 40px rgba(0, 0, 0, 0.6);
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjkiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.9) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.9)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.9) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,0.9) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.9) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#ffffff',GradientType=0 ); 
+}
+
+.menu h2{
+	text-align: left;
+	padding: 50px 0px 0px 50px;
+}
+.menu p{
+	text-align: left;
+	padding: 10px 0px 0px 50px;
+	width:770px;
+}
+.menuRibbons{
+	background-color:#550000;
+	color:white;
+	font-style: italic;
+	text-align: left;
+	text-transform: uppercase;
+	padding: 8px 0px 8px 15px;
+	margin: 50px 0px 0px 45px;
+	width:88%;
+	line-height:15px;
+}
+#imgleft{
+	background-image: image-url('bg-chefjen.png');
+	background-repeat: no-repeat;
+	width: 680px;
+	height: 264px;
+	transition: all 0.8s ease-in-out;
+	margin-top:50px;
+	display:block;
+	margin-left:80px;
+}
+
+#imgleft:hover{
+	background-image: image-url('bg-chefjenhover.png');
+}
+
+#imgright{
+	background-image: image-url('bg-map.png');
+	width: 680px;
+	height: 264px;
+	background-repeat: no-repeat;
+	transition: all 0.8s ease-in-out;
+	display:block;
+	margin-left:80px;
+}
+
+#imgright:hover{
+	background-image: image-url('bg-maphover.png');
+}
+
+#footer{
+	background-color:#c61d23;
+	width:100%;
+	position:relative;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow:  0px 0px 40px rgba(0, 0, 0, 0.6);
+}
+
+#social{
+	width:390px;
+	height:50px;
+	margin:0 auto;
+	padding:80px 0px 50px 0px;
+}
+
+#social a img{
+	padding:0px 10px;
+	transition: all 0.4s ease-in-out;
+}
+
+#social a img:hover{
+	opacity: .3;
+}
+
+.rotator{
+	width:100%;
+	margin-top:-53px;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow:  0px 0px 40px rgba(0, 0, 0, 0.6);
+}
+
+.linkline{
+	 color:#C61D23;
+	 font-family: sanchez, sans-serif;
+	 text-transform: uppercase;
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index:0;
+  margin-top:-53px;
+  background-color:black;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow:  0px 0px 40px rgba(0, 0, 0, 0.6);
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
