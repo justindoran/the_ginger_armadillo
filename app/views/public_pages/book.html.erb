@@ -6,5 +6,7 @@
   party, or event you can give us a call at (512) 815-2869. You can also fill
   out the form below. That form just gets sent to our email address, so if you
   hate forms you can just freestyle a request directly to
-  info@thegingerarmadillo.com</p>
+  <%= mail_to 'info@thegingerarmadillo.com' %>
+
+  <%= render 'layouts/truckily_request' %></p>
 </div>

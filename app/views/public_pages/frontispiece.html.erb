@@ -9,4 +9,16 @@
   in season, so you’ll never have to have the same thing twice. But I bet 
   you’ll want to.
 	</p>
+<%= render 'layouts/twitter_feed' %>
+  <span class="linkline">
+    <%= link_to('Follow Us', 'https://twitter.com/thegingerdillo') %>
+    &nbsp; | &nbsp;
+    <%= link_to('Find Us', locate_path) %>
+    &nbsp; | &nbsp; 
+    <%= link_to('512.815.2869', contact_path) %>
+  </span>
+
+  <%= link_to('', story_path, id: 'imgleft') %>
+  <%= link_to('', locate_path, id: 'imgright') %>
+</div>
 </div>
