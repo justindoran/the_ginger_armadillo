@@ -15,6 +15,7 @@ gem 'uglifier', '~> 2.5.3'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.2'
+  gem 'capistrano-rails', '~> 1.1.1'
 end
 
 group :test do
@@ -30,4 +31,5 @@ end
 
 group :production do
   gem 'rails_12factor', '0.0.2'
+  gem 'unicorn', '~> 4.8.3'
 end
