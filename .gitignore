@@ -29,3 +29,8 @@ doc/
 # Ignore zeus
 custom_plan.rb
 zeus.json
+
+# Ignore capistrano
+Capfile
+/config/deploy*
+/lib/capistrano*
