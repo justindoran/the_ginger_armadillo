@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -15,16 +16,11 @@
 /log/*.log
 /tmp
 
-# Ignore other unneeded files.
+# Ignore these for security reasons.
 database.yml
-doc/
-*.swp
-*~
-*.keep
-.project
-.DS_Store
-.idea
 .secret
+config/initializers/secret_token.rb
+config/secrets.yml
 
 # Ignore zeus
 custom_plan.rb
@@ -32,5 +28,16 @@ zeus.json
 
 # Ignore capistrano
 Capfile
-/config/deploy*
-/lib/capistrano*
+/config/deploy/*
+
+# Ignore old versions of rvm, or odd configurations of rvm.
+.rvmrc
+
+# Ignore misc files that get added periodically
+doc/
+*.swp
+*~
+*.keep
+.project
+.DS_Store
+.idea
