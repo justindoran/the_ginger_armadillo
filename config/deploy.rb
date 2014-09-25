@@ -3,7 +3,6 @@ lock '3.2.1'
 
 set :application, 'the_ginger_armadillo'
 set :repo_url, 'https://github.com/justindoran/the_ginger_armadillo.git'
-set :deploy_to, '/srv/www/the_ginger_armadillo'
 
 set :deploy_via, :remote_cache
 # Default branch is :master
@@ -19,27 +18,29 @@ set :deploy_via, :remote_cache
 # Default value for :pty is false
 # set :pty, true
 # Default value for :linked_files is []
-# set :linked_files, %w{config/database.yml}
 # Default value for linked_dirs is []
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-# namespace :deploy do
-# 
-#   desc 'Restart application'
-#   task :restart do
-#     on roles(:app), in: :sequence, wait: 5 do
-#       #NOTE:Your restart mechanism here, for example:
-#     end
-#   end
-# 
-#   after :publishing, :restart
+# --
+
+set :linked_files, %w{config/database.yml config/unicorn.rb}
+set :linked_dirs, %w{log tmp/pids}
+namespace :deploy do
+
+  desc 'Restart application'
+  task :reload do
+   on roles(:app), in: :sequence, wait: 5 do
+     execute "sudo service unicorn reload the_ginger_armadillo"
+   end
+  end
+
+  after :publishing, :reload
 # 
 #   after :restart, :clear_cache do
 #     on roles(:web), in: :groups, limit: 3, wait: 10 do
 #     end
 #   end
 # 
-# end
+end

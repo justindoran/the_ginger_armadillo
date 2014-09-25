@@ -28,7 +28,8 @@ zeus.json
 
 # Ignore capistrano
 Capfile
-/config/deploy/*
+/config/deploy*
+/config/unicorn.rb
 
 # Ignore old versions of rvm, or odd configurations of rvm.
 .rvmrc
