@@ -16,7 +16,7 @@ gem 'uglifier', '~> 2.5.3'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.2'
   gem 'capistrano-rails', '~> 1.1.2'
-  gem 'rvm1-capistrano3', '~> 1.2.6'
+  gem 'rvm1-capistrano3', '~> 1.2.6', require: false
 end
 
 group :test do
