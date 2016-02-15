@@ -7,6 +7,7 @@ TheGingerArmadillo::Application.routes.draw do
   match '/locate',             to: 'public_pages#locate',    via: 'get'
   match '/menu',               to: 'public_pages#menu',      via: 'get'
   match '/story',              to: 'public_pages#story',     via: 'get'
+  match '/newsletter',         to: 'public_pages#newsletter',via: 'get'
 
   # Legacy public page routes
   match '/bookus',              to: 'public_pages#book',     via: 'get'

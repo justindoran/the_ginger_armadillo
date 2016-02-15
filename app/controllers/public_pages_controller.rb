@@ -22,4 +22,7 @@ class PublicPagesController < ApplicationController
 
   def contact
   end
+  
+  def newsletter
+  end
 end

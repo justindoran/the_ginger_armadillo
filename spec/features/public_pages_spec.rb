@@ -59,4 +59,11 @@ describe "Public pages" do
     it { should have_content('Our Story') }
     it { should have_title(base_title + ' | Story') } 
   end
+
+  describe "Newsletter" do
+    before { visit newsletter_path }
+
+    it { should have_content('Sign up') }
+    it { should have_title(base_title + ' | Newsletter') } 
+  end
 end
